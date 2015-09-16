@@ -95,24 +95,3 @@ gulp.task('default', () => {
   console.log('Get your gulp on fool!');
 });
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-## Updating Node
-Sometimes you need to update your version of Node. You can do that my downloading it again: [Node](https://nodejs.org/en/). Or you can do it form the command line : [Upgrade Node.js via NPM](http://davidwalsh.name/upgrade-nodejs)
-
-## Updating Global Packages
-Sometimes you need to update the Global packages you installed. Follow these instucitons listed here to do that [Updating global packages](Updating global packages)
-
-
-## Other Resources
-- [Gulp for Beginners](https://css-tricks.com/gulp-for-beginners/)
