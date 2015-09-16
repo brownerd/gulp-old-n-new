@@ -2,7 +2,7 @@
 
 Gulp is a breeze. Just hack on it for a while and you'll start to see how easy and awesome it is. Here is a starter guide to help you level up.
 
-Since ES6 is a popular now, I'll be showing how to make a Gulpfile the old school way and the ES6 way at the same time.
+Since ES6 is popular now, I'll be showing how to make a Gulpfile the old school way and the ES6 way at the same time.
 
 ## NODE First
 You can't get yer Gulp on without [Node](https://nodejs.org/en/) installed. Go install that if you haven't done so already.
@@ -58,7 +58,7 @@ Is this ok? (yes)
 Ok, let's install Gulp globally now. Run `npm install gulp -g` in your terminal. If that doesn't take, run `sudo npm install gulp -g`.
 
 
-## Gulpfile.js
+## ES5 gulpfile.js
 Create a file called `gulpfile.js`. You can do in your editor or from the commandline by typing `touch gulpfile.js`. Your Gulpfile contains all of the "required" modules and "tasks" necessary to run the build processes that you want.
 
 Now let's get Gulp in this project. Run `npm install gulp --save-dev`.
@@ -72,26 +72,13 @@ If you look into your `package.json` file, you will notice that it has been upda
 ```
 When you install modules using NPM it will add them to an `node_modules` directory and it will update the `package.json` file to list the modules installed for this project.
 
-## Bare bomes gulpfile in ES5 and ES6
-I'm going to show you how to do this in ES5 and ES6. Most exapmles you find for Gulpfiles with use the ES5 syntax. However, ES6 is starting to take over, so it's important to know both
+---
+
+## ES6 gulpfile.babel.js
+If you want to make a gulpfile using ES6, follow these instructions below instead
+To get your gulpfile to work with the ES6 syntax, you also need to install Babel. Do so by running `npm install babel-core --save-dev`. You also need make a file called `gulpfile.babel.js`.
 
 
-```js
-// ES5
-var gulp = require('gulp');
 
-gulp.task('default', function() {
-  console.log('Get your gulp on fool!');
-});
-```
-
-To get your gulpfile to work with the ES6 syntax, you also need to install Babel. Do so by running `npm install babel-core --save-dev`. You also need to rename `gulpfile.js` to `gulpfile.babel.js`. You can do this from the terminal by running `mv "gulpfile.js" "gulpfile.babel.js"`
-
-```js
-//ES6
-import gulp from 'gulp';
-
-gulp.task('default', () => {
-  console.log('Get your gulp on fool!');
-});
-```
+## More
+Check the `1-barebones` branch for setting up a simple gulp task
