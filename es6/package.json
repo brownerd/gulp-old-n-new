@@ -1,14 +1,15 @@
 {
-  "name": "gulp-basics",
+  "name": "es6",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^5.8.24",
     "gulp": "^3.9.0"
   }
 }
