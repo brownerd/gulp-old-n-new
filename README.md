@@ -70,17 +70,42 @@ If you look into your `package.json` file, you will notice that it has been upda
   "gulp": "^3.9.0"
 }
 ```
-When you install modules using NPM it will create an `node_modules` directory and it will update the `package.json` file to list the dependancies for this project.
+When you install modules using NPM it will add them to an `node_modules` directory and it will update the `package.json` file to list the modules installed for this project.
 
-## Require/import Gulp
-No it is time to get Gulp "into" your gulpfile.
-
-### Old School way
-Paste this into your gulpfile `var gulp = require('gulp');`
+## Bare bomes gulpfile in ES5 and ES6
+I'm going to show you how to do this in ES5 and ES6. Most exapmles you find for Gulpfiles with use the ES5 syntax. However, ES6 is starting to take over, so it's important to know both
 
 
-### ES6 way
-Paste this into your gulpfile `import gulp from 'gulp';`
+```js
+// ES5
+var gulp = require('gulp');
+
+gulp.task('default', function() {
+  console.log('Get your gulp on fool!');
+});
+```
+
+To get your gulpfile to work with the ES6 syntax, you also need to install Babel. Do so by running `npm install babel-core --save-dev`. You also need to rename `gulpfile.js` to `gulpfile.babel.js`. You can do this from the terminal by running `mv "gulpfile.js" "gulpfile.babel.js"`
+
+```js
+//ES6
+import gulp from 'gulp';
+
+gulp.task('default', () => {
+  console.log('Get your gulp on fool!');
+});
+```
+
+
+
+
+
+
+
+
+
+
+
 
 ## Updating Node
 Sometimes you need to update your version of Node. You can do that my downloading it again: [Node](https://nodejs.org/en/). Or you can do it form the command line : [Upgrade Node.js via NPM](http://davidwalsh.name/upgrade-nodejs)
